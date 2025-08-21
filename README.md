@@ -30,7 +30,7 @@ Este projeto foi desenvolvido com foco em praticar os conceitos mais importantes
 1. **Acesse o projeto online:** [Clique aqui para abrir](https://challenge-amigo-secreto-three-sigma.vercel.app/)
 2. **Ou clone este repositório:**
 ```bash
-git clone https://github.com/seu-usuario/amigo-secreto.git
+git clone git@github.com:LarissaPanisset/Challenge-Amigo-Secreto.git
 ```
 3. Abra o arquivo index.html em seu navegador
 4. Comece a adicionar nomes e realizar sorteios!

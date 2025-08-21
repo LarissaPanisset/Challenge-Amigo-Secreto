@@ -3,7 +3,7 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-🔗 Veja o projeto em funcionamento: [Clique aqui para abrir o Amigo Secreto ](https://seu-usuario.github.io/amigo-secreto/)
+🔗 Veja o projeto em funcionamento: [Clique aqui para abrir o Amigo Secreto ](https://challenge-amigo-secreto-three-sigma.vercel.app/)
 
 Um projeto interativo para praticar os conceitos fundamentais de programação através da criação de um sorteador de amigos secretos. 
 
@@ -27,7 +27,7 @@ Este projeto foi desenvolvido com foco em praticar os conceitos mais importantes
 
 ## 🚀 Como Executar
 
-1. **Acesse o projeto online:** Clique aqui para abrir  
+1. **Acesse o projeto online:** [Clique aqui para abrir](https://challenge-amigo-secreto-three-sigma.vercel.app/)
 2. **Ou clone este repositório:**
 ```bash
 git clone https://github.com/seu-usuario/amigo-secreto.git

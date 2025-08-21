@@ -11,9 +11,9 @@ Um projeto interativo para praticar os conceitos fundamentais de programação a
 - ✅ Adicionar nomes à lista de amigos 
 - ✅ Validação de entrada de dados 
 - ✅ Visualização da lista em tempo real 
-- ✅ Sorteio aleat ório de um amigo secr eto 
-- ✅ Controle para evitar sor teios duplicados 
-- ✅ Interface amigá vel e responsiv a 
+- ✅ Sorteio aleatório de um amigo secreto 
+- ✅ Controle para evitar sorteios duplicados 
+- ✅ Interface amigável e responsiva 
 
 ## 🎯 Objetivo do Desafio 
 

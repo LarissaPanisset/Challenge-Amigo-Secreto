@@ -13,7 +13,7 @@ Um projeto interativo para praticar os conceitos fundamentais de programação a
 - ✅ Visualização da lista em tempo real 
 - ✅ Sorteio aleatório de um amigo secreto 
 - ✅ Controle para evitar sorteios duplicados 
-- ✅ Interface amigável e responsiva 
+- ✅ Interface amigável
 
 ## 🎯 Objetivo do Desafio 
 
@@ -76,12 +76,14 @@ for (let i = 0; i < amigos.length; i++) {
  - Controle para não sortear a mesma pessoa duas vezes
 
 ## 🎨 Personalização
-O HTML e o CSS do projeto já estão prontos.
+ - Interface limpa e intuitiva
+ - Animações suaves e interações elegantes
+ - Cores: Paleta harmoniosa com gradientes modernos
+ - Tipografia: Fontes legíveis e hierarquia visual clara
+ - Ícones: Elementos visuais intuitivos para melhor experiência do usuário
+ - Botões: Design moderno com efeitos hover e transições suaves
 
 ## 🔮 Melhorias Futuras
- - Aprimorar o design da interface
- - Adicionar um botão de "Reiniciar"
- - Opção para ocultar o nome sorteado
  - Permitir que cada participante adicione opções de presente
  - Implementar funcionalidade de grupos
    

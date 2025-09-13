@@ -1,161 +1,285 @@
 :root {
-    --color-primary: #4B69FD;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
-    --color-text: #444444;
-    --color-white: #FFFFFF;
+  --color-primary: #d65b7b;
+  --color-secondary: #f28ca3;
+  --color-accent: #ffb6c1;
+  --color-background: rgba(255, 255, 255, 0.85);
+  --color-text: #4a2c2c;
+  --color-text-light: #7a5a5a;
+  --color-white: #ffffff;
+  --color-success: #5cb85c;
+  --color-warning: #b84c6a;
+  --color-border: #e0b6c0;
+  --color-button: #b84c6a;
+  --color-button-hover: #ffb6c1;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  --radius: 12px;
 }
-/* Estilos gerais */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.imagem-fundo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 body {
-    height: 100vh;
-    background-color: var(--color-primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 40px;
+  background-size: cover;
+  position: relative;
+  color: var(--color-text);
 }
 
-.main-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 192, 203, 0.25);
+  z-index: 0;
 }
 
-/* Banner */
-.header-banner {
-    flex: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0 0;
+/* CAIXA PRINCIPAL COM EFEITO DE VIDRO 3D */
+.caixa {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 30px;
+  position: relative;
+  z-index: 2;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  margin-right: 40px;
 }
 
-/* Seção de entrada */
-.input-section {
-    flex: 60%;
-    background-color: var(--color-secondary);
-    border: 1px solid #000;
-    border-radius: 64px 64px 0 0;
-    display: flex;
+.caixa:hover {
+  transform: translateY(-5px) rotateX(1.5deg) rotateY(1.5deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Efeito de reflexo */
+.caixa::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background: linear-gradient(45deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  z-index: -1;
+  border-radius: calc(var(--radius) + 8px);
+  opacity: 0.6;
+}
+
+.cabecalho {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cabecalho h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.cabecalho p {
+  color: var(--color-text-light);
+}
+
+.secao-input {
+  margin-bottom: 25px;
+}
+
+.grupo-input {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.entrada-nome {
+  flex: 1;
+  padding: 14px 18px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius) 0 0 var(--radius);
+  font-size: 1rem;
+  background: #fff;
+  color: var(--color-text);
+}
+
+.entrada-nome:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.botao-adicionar {
+  padding: 14px 20px;
+  background: var(--color-button);
+  color: var(--color-white);
+  border: none;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.botao-adicionar:hover {
+  background: var(--color-button-hover);
+}
+
+.caixa-lista {
+  background: #ffe6eb;
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+
+.cabecalho-lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.titulo-lista {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.lista-nomes {
+  list-style-type: none;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.lista-nomes li {
+  padding: 10px 15px;
+  background: #ffd6e0;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.caixa-resultado {
+  background: #ffe6eb;
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  margin-bottom: 25px;
+}
+
+.cabecalho-resultado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.titulo-resultado {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.botaoocultar {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-light);
+  border-radius: 20px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.botaoocultar:hover {
+  background: #ffd6e0;
+  color: var(--color-primary);
+}
+
+.conteudo-resultado {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lista-resultado {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-success);
+}
+
+.container-botoes {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.botao-sortear, .botao-reiniciar {
+  flex: 1;
+  padding: 16px 28px;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--color-white);
+}
+
+.botao-sortear {
+  background: var(--color-button);
+}
+
+.botao-sortear:hover {
+  background: var(--color-button-hover);
+}
+
+.botao-reiniciar {
+  background: var(--color-warning);
+}
+
+.botao-reiniciar:hover {
+  background: #ffb6c1;
+}
+
+.estado-vazio {
+  text-align: center;
+  color: var(--color-text-light);
+  padding: 20px;
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    width: 100%;
-}
-
-/* Títulos */
-.main-title {
-    font-size: 48px;
-    font-family: "Merriweather", serif;
-    font-weight: 900;
-    font-style: italic;
-    color: var(--color-white);
-}
-
-.section-title {
-    font-family: "Inter", serif;
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--color-primary);
-    margin: 10px 0;
-    text-align: center;
-}
-
-/* Contêineres de entrada e botão */
-.input-wrapper {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 600px;
-    margin-top: 20px;
-}
-
-.input-name {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #000;
-    border-radius: 25px 0 0 25px;
-    font-size: 16px;
-}
-
-.button-container {
-    width: 300px;
-    justify-content: center;
-}
-
-/* Estilos de entrada de texto */
-.input-title {
-    flex: 1;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 2px solid #333;
-    border-right: none;
-    border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Estilos de botão */
-button {
-    padding: 15px 30px;
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    border: 2px solid #000;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
-
-.button-add {
-    background-color: var(--color-tertiary);
-    color: var(--color-text);
-    border-radius: 0 25px 25px 0;
-}
-
-.button-add:hover {
-    background-color: #a1a1a1;
-}
-
-/* Listas */
-ul {
-    list-style-type: none;
-    color: var(--color-text);
-    font-family: "Inter", sans-serif;
-    font-size: 18px;
-    margin: 20px 0;
-}
-
-.result-list {
-    margin-top: 15px;
-    color: #05DF05;
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* Botão de sortear título */
-.button-draw {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 10px 40px;
-    color: var(--color-white);
-    background-color: var(--color-button);
-    font-size: 16px;
-}
-
-.button-draw img {
-    margin-right: 40px;
-}
-
-.button-draw:hover {
-    background-color: var(--color-button-hover);
+  }
+  .caixa {
+    max-width: 100%;
+  }
+  .glass-layer {
+    display: none;
+  }
 }

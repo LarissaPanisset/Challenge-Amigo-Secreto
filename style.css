@@ -54,7 +54,7 @@ body::before {
   z-index: 0;
 }
 
-/* CAIXA PRINCIPAL COM EFEITO DE VIDRO 3D */
+/* CAIXA PRINCIPAL*/
 .caixa {
   width: 100%;
   max-width: 500px;
@@ -68,7 +68,8 @@ body::before {
   transform-style: preserve-3d;
   perspective: 1000px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  margin-right: 40px;
+  margin-left: 110px;
+  margin-top: 40px;
 }
 
 .caixa:hover {

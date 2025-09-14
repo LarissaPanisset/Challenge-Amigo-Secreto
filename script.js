@@ -119,6 +119,6 @@ function reiniciarSorteio() {
     document.getElementById('btnAdicionar').disabled = false;
     document.getElementById('btnOcultar').disabled = true; // ocultar continua desativado até sortear
 
-    // Exibe mensagem informativa
+    // Exibe mensagem 
     alert("Sorteio reiniciado! Adicione amigos para sortear.");
 }

@@ -7,6 +7,10 @@
 
 Um projeto interativo para praticar os conceitos fundamentais de programação através da criação de um sorteador de amigos secretos. 
 
+## 🎥 Demonstração  
+![Demonstração do Sorteador](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdG1najBoN3BvNjRnYjl3MWs1MGIwdXk2Nm1qdzFmbmZianR5Nmw4NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TEjBIkgTQpnAbB9COQ/giphy.gif)  
+*(GIF mostrando o fluxo completo Sorteador )*  
+
 ## ✨ Funcionalidades 
 - ✅ Adicionar nomes à lista de amigos 
 - ✅ Validação de entrada de dados 

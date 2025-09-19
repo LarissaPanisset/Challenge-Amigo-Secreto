@@ -18,8 +18,8 @@ Um projeto interativo para praticar os conceitos fundamentais de programação a
 - ✅ Sorteio aleatório de um amigo secreto 
 - ✅ Controle para evitar sorteios duplicados 
 - ✅ Interface amigável
-- ✅ **Ocultar resultado** - Opção para revelar o nome sorteado apenas quando o usuário desejar
-- ✅ **Reiniciar sorteio** - Limpa o resultado atual para um novo sorteio  
+- ✅ Ocultar resultado, opção para revelar o nome sorteado apenas quando o usuário desejar
+- ✅ Reiniciar sorteio, limpa o resultado atual para um novo sorteio  
 
 ## 🎯 Objetivo do Desafio 
 
